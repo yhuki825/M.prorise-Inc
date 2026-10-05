@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!--
+================================================================
+株式会社M.prorise ブランドサイト デザイン案
+  コンセプト：「指先から、ひとを上へ。」
+    社名の「prorise」を pro（プロの技術）＋ rise（上がる・立ちあがる）と読み、
+    ネイルの三層（ベース／カラー／トップ）が重なって仕上がるように、
+    サロン・スクール・人材紹介の三つの仕事が、ひとを一段ずつ上へ押し上げる姿に見立てています。
+    ・ヒーロー：下から舞い上がるきらめきの粒が集まり、一枚の爪のかたちを描くCanvasアニメーション
+    ・右端のスクロールレール：下から塗り重なる三層のポリッシュ（BASE → COLOR → TOP）
+    ※社名の「M.」は代表者のお名前の頭文字と重なる可能性があるため、解釈に使っていません。
+    ※所在地・地名、代表者のお名前から着想した要素は採用していません。
+  デプロイ：Cloudflare Pages（Direct Upload）にこのファイルをそのままアップロード。
+            ビルド不要。外部依存は Google Fonts と Unsplash 画像のみ。
+
+  ■ 公開前の確認事項（チェックリスト）
+  [ ] 1. 【確認事項】社名の解釈（prorise＝pro＋rise）は本案のデザイン上の読みです。正しい由来をご確認ください
+  [ ] 2. 【確認事項】キャッチコピー「指先から、ひとを上へ。」は仮案です
+  [ ] 3. 【確認事項】英字ロゴ「M.prorise」は商号の表記をそのままテキストで組んだ仮ロゴです
+  [ ] 4. 【確認事項】「複合ビューティーサロン」という位置づけ表現（CSVの記載をもとにした言い換え）
+  [ ] 5. 【確認事項】各メニュー（ネイル／ストレッチ／HBL／脱毛）の説明文はCSVに無い補足です。料金・所要時間は掲載していません
+  [ ] 6. 【確認事項】「HBL」の正式名称・施術内容（説明はぼかして記載しています）
+  [ ] 7. 【確認事項】脱毛・HBL等の表現が医療行為・効能効果と受け取られないか（医師法・薬機法・景品表示法の観点で最終確認を推奨）
+  [ ] 8. 【確認事項】ネイルスクールの内容（コース・資格対応の有無などは記載していません）
+  [ ] 9. 【確認事項】有料職業紹介：許可番号・対象職種をご確認ください（職業安定法。許可番号は会社概要にコメントで枠を用意）
+  [ ] 10.【確認事項】CSV「営業担当も必須」の意図（採用募集の掲載か、事業に営業担当が必要という意味か）。
+         仮に「ともに働く仲間」欄で営業担当の募集をにおわせる文章のみ置いています（応募導線は無し）
+  [ ] 11.【確認事項】サロンの流れ・大切にしていること・代表メッセージの文章はすべて仮案（草案）です
+  [ ] 12.【確認事項】代表者の役職名（「代表取締役」と仮置き）。代表メッセージの署名には氏名を入れていません
+  [ ] 13.【確認事項】設立年月日・資本金・従業員数 … 未確認のため会社概要ではコメントアウト
+  [ ] 14.【確認事項】所在地・代表者名は会社概要の表にのみ記載。公開可否をご確認ください
+  [ ] 15.【確認事項】画像はUnsplashのフリー素材（仮）。自店撮影の写真への差し替えを推奨
+         1632345031435-8727f6897d53 / 1604654894610-df63bc536371 / 1610992015732-2449b76344bc /
+         1521590832167-7bcbfaa6381f / 1518611012118-696072aa579a / 1515377905703-c4788e51af15 / 1552693673-1bf958298935
+  [ ] 16. OGP画像・favicon・公開URL
+  ※ ご依頼に合わせ、連絡用フォーム・連絡窓口の案内エリア・代表者写真は設けていません
+================================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>株式会社M.prorise｜ネイルを主としたビューティーサロン・ネイルスクール・人材紹介</title>
+<meta name="description" content="株式会社M.proriseは、ネイルサロンを主に、ストレッチ・HBL・脱毛をそろえた複合ビューティーサロンを運営。ネイルスクールと有料人材紹介業も行っています。">
+<meta property="og:title" content="株式会社M.prorise｜ネイルを主としたビューティーサロン・ネイルスクール・人材紹介">
+<meta property="og:description" content="株式会社M.proriseは、ネイルサロンを主に、ストレッチ・HBL・脱毛をそろえた複合ビューティーサロンを運営。ネイルスクールと有料人材紹介業も行っています。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<!-- 要確認：og:url / og:image は公開ドメイン確定後に設定 -->
+<meta name="theme-color" content="#1D1517">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231D1517'/%3E%3Cpath d='M16 5 C22 9 23 17 22 22 C21 27 11 27 10 22 C9 17 10 9 16 5Z' fill='none' stroke='%23E4A2A4' stroke-width='2'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho+B1:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--base:#1D1517;       /* ローズウッドの深い褐色 */
+  --base-2:#271C1F;     /* 一段明るいサロンの影 */
+  --base-deep:#150F11;  /* フッター */
+  --text:#F3E9E4;       /* 素肌のような生成り */
+  --text2:#D9CBC6;
+  --mute:#A8979A;       /* くすんだ藤鼠 */
+  --accent:#E4A2A4;     /* --polish：塗りたてのローズ */
+  --gloss:#E9D2A8;      /* トップコートの艶（シャンパン） */
+  --line:rgba(243,233,228,.14);
+  --hdr:rgba(29,21,23,.86);
+  --menu:rgba(29,21,23,.97);
+  --fallback:radial-gradient(circle at 30% 30%,rgba(228,162,164,.35),transparent 60%),linear-gradient(140deg,#2c2024,#1D1517);
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --latin:"Cormorant Garamond","Times New Roman",serif;
+  --num:"Cormorant Garamond","Times New Roman",serif;
+  --hh:72px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.04em;word-break:auto-phrase;text-wrap:pretty;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.nw{display:inline-block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--accent);color:var(--base);padding:10px 16px;text-decoration:none;font-weight:700}
+.skip:focus{top:calc(12px + env(safe-area-inset-top,0px))}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1160px,100% - 48px);margin:0 auto}
+.sec{position:relative;padding:clamp(96px,14vw,176px) 0}
+/* header */
+.header{position:fixed;inset:0 0 auto 0;z-index:100;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid transparent;transition:background .45s,border-color .45s,backdrop-filter .45s}
+.header.is-scrolled{background:var(--hdr);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
+.header__in{width:min(1240px,100% - 40px);margin:0 auto;height:var(--hh);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo svg{width:32px;height:32px;flex:none}
+.logo__txt{font-family:var(--serif);font-weight:600;font-size:17px;letter-spacing:.14em;line-height:1.25}
+.logo__txt small{display:block;font-family:var(--latin);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--mute)}
+.gnav ul{display:flex;gap:clamp(18px,2.4vw,34px)}
+.gnav a{position:relative;display:block;padding:6px 0;font-size:13px;letter-spacing:.13em;text-decoration:none}
+.gnav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.gnav a:hover::after,.gnav a:focus-visible::after{transform:scaleX(1)}
+.menu-btn{display:none;background:none;border:0;color:var(--text);width:44px;height:44px;cursor:pointer;position:relative;flex:none}
+.menu-btn span{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .3s,opacity .3s}
+.menu-btn span:nth-child(1){top:16px}.menu-btn span:nth-child(2){top:22px}.menu-btn span:nth-child(3){top:28px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:900px){
+  .menu-btn{display:block;z-index:120}
+  .gnav{position:fixed;inset:0;background:var(--menu);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;z-index:110}
+  .gnav.is-open{opacity:1;visibility:visible}
+  .gnav ul{flex-direction:column;align-items:center;gap:26px}
+  .gnav a{font-family:var(--serif);font-size:20px;letter-spacing:.16em}
+}
+/* rail */
+.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);height:52vh;width:30px;z-index:90;pointer-events:none}
+@media (max-width:820px){.rail{display:none}}
+/* hero entrance (class toggle) */
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero [data-in]{opacity:0;transform:translateY(14px);transition:opacity 1.2s cubic-bezier(.22,.7,.2,1),transform 1.2s cubic-bezier(.22,.7,.2,1)}
+.is-loaded .hero [data-in]{opacity:1;transform:none}
+.is-loaded .hero [data-in="2"]{transition-delay:.4s}
+.is-loaded .hero [data-in="3"]{transition-delay:.85s}
+.is-loaded .hero [data-in="4"]{transition-delay:1.25s}
+.cue{position:absolute;left:50%;bottom:26px;width:1px;height:54px;background:var(--line);overflow:hidden}
+.cue::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--text);animation:drop 2.4s ease-in-out infinite}
+@keyframes drop{to{top:100%}}
+/* reveal (only when JS runs) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.22,.7,.2,1),transform 1s cubic-bezier(.22,.7,.2,1)}
+.js .reveal.is-in{opacity:1;transform:none}
+/* photo frames */
+.ph{position:relative;overflow:hidden;background:var(--fallback)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.is-fallback{background:var(--fallback)}
+/* band */
+.band{position:relative;height:clamp(260px,42vw,520px);overflow:hidden;margin:0}
+.band img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;filter:saturate(.72) brightness(.66);will-change:transform}
+.band figcaption{position:absolute;left:0;right:0;bottom:clamp(28px,5vw,56px);width:min(1160px,100% - 48px);margin:0 auto;font-family:var(--serif);font-size:clamp(18px,2.4vw,28px);letter-spacing:.14em;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+/* business rows */
+.biz{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.biz + .biz{margin-top:clamp(72px,10vw,128px)}
+.biz:nth-of-type(even) .biz__media{order:2}
+.biz__media{aspect-ratio:4/3}
+.biz__media img{filter:saturate(.78);transform:scale(1.06);transition:transform 2s cubic-bezier(.2,.6,.2,1)}
+.biz.is-in .biz__media img{transform:scale(1)}
+.biz__kind{font-size:13px;letter-spacing:.16em;color:var(--accent)}
+.biz h3{font-family:var(--serif);font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:.1em;line-height:1.6;margin:10px 0 18px}
+.biz p{max-width:30em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:4px 13px;font-size:12.5px;letter-spacing:.08em}
+@media (max-width:900px){.biz{grid-template-columns:minmax(0,1fr)}.biz:nth-of-type(even) .biz__media{order:0}}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.4vw,32px);position:relative;margin-top:clamp(40px,6vw,72px)}
+.steps::before{content:"";position:absolute;left:0;right:0;top:11px;height:1px;background:var(--line)}
+.steps::after{content:"";position:absolute;left:0;top:11px;height:1px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 2.4s cubic-bezier(.6,.1,.2,1)}
+.steps.is-in::after{transform:scaleX(1)}
+.step{position:relative;padding-top:44px}
+.step__dot{position:absolute;left:0;top:0;width:23px;height:23px;border-radius:50%;border:1px solid var(--mute);background:var(--base);display:grid;place-items:center}
+.step__dot::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.steps.is-in .step__dot::after{transform:scale(1)}
+.steps.is-in .step:nth-child(2) .step__dot::after{transition-delay:.6s}
+.steps.is-in .step:nth-child(3) .step__dot::after{transition-delay:1.2s}
+.steps.is-in .step:nth-child(4) .step__dot::after{transition-delay:1.8s}
+.step__no{font-family:var(--num);font-size:13px;color:var(--accent);letter-spacing:.12em}
+.step h3{font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:.14em;margin:6px 0 2px}
+.step small{display:block;font-size:12px;color:var(--mute);letter-spacing:.12em;margin-bottom:10px}
+.step p{font-size:15px}
+@media (max-width:900px){
+  .steps{grid-template-columns:minmax(0,1fr);gap:0;padding-left:40px}
+  .steps::before,.steps::after{left:11px;right:auto;top:10px;bottom:10px;width:1px;height:auto}
+  .steps::after{transform:scaleY(0);transform-origin:top}
+  .steps.is-in::after{transform:scaleY(1)}
+  .step{padding:0 0 36px}
+  .step__dot{left:-40px}
+}
+/* values */
+.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--line)}
+.values li{padding:32px clamp(18px,2.6vw,36px) 8px;border-left:1px solid var(--line)}
+.values li:first-child{border-left:0;padding-left:0}
+.values h3{font-family:var(--serif);font-weight:600;font-size:clamp(19px,2vw,23px);letter-spacing:.12em;line-height:1.6;margin-bottom:12px}
+.values p{font-size:15px;color:var(--text2)}
+@media (max-width:860px){.values{grid-template-columns:minmax(0,1fr)}.values li,.values li:first-child{border-left:0;padding:26px 0 22px;border-bottom:1px solid var(--line)}}
+/* message */
+.msg{display:flex;flex-direction:row-reverse;gap:clamp(40px,6vw,90px);justify-content:center;align-items:flex-start}
+.msg__title{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(28px,3vw,40px);letter-spacing:.2em;line-height:1.7;flex:none}
+.msg__title small{display:block;font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:.24em;color:var(--mute);margin-right:1.2em}
+.msg__body{writing-mode:vertical-rl;font-family:var(--serif);font-size:16px;line-height:2.3;letter-spacing:.14em;height:30em;max-width:100%;overflow-x:auto}
+.msg__body p{margin:0 0 0 1.6em}
+.msg__body p.first{font-size:1.25em}
+.msg__sign{text-align:end;color:var(--text2);font-size:14px;letter-spacing:.24em}
+@media (max-width:860px){
+  .msg{flex-direction:column;gap:32px}
+  .msg__title,.msg__body{writing-mode:horizontal-tb;height:auto}
+  .msg__title small{margin:10px 0 0}
+  .msg__body{line-height:2.1;letter-spacing:.06em}
+  .msg__body p{margin:0 0 1.4em}
+  .msg__sign{text-align:right}
+}
+/* profile */
+.profile-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:clamp(40px,7vw,110px);align-items:start}
+.profile{width:100%;border-collapse:collapse;font-size:15px}
+.profile th,.profile td{text-align:left;vertical-align:top;padding:22px 0;border-bottom:1px solid var(--line);font-weight:400}
+.profile tr:first-child th,.profile tr:first-child td{border-top:1px solid var(--line)}
+.profile th{width:9em;color:var(--mute);font-size:14px;letter-spacing:.14em;padding-right:24px}
+.profile td li{position:relative;padding-left:1.1em}
+.profile td li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:6px;background:var(--accent);border-radius:var(--bullet-r,50%)}
+dl.profile{margin:0;border-top:1px solid var(--line)}
+dl.profile > div{display:grid;grid-template-columns:9em minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+dl.profile dt{color:var(--mute);font-size:14px;letter-spacing:.14em}
+dl.profile dd li{position:relative;padding-left:1.1em}
+dl.profile dd li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:6px;background:var(--accent);border-radius:var(--bullet-r,50%)}
+@media (max-width:760px){
+  .profile-grid{grid-template-columns:minmax(0,1fr)}
+  .profile th,.profile td{display:block;width:auto;padding:0}
+  .profile th{padding-top:20px;border-bottom:0}
+  .profile td{padding:4px 0 20px}
+  .profile tr:first-child td{border-top:0}
+  dl.profile > div{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+/* footer */
+.footer{padding:72px 0 calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--base-deep)}
+.footer__in{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px}
+.footer__tag{font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);letter-spacing:.18em;margin-top:16px}
+.footer nav ul{display:flex;flex-wrap:wrap;gap:8px 22px}
+.footer nav a{font-size:12.5px;color:var(--mute);text-decoration:none;letter-spacing:.12em;transition:color .3s}
+.footer nav a:hover{color:var(--text)}
+.footer__copy{display:block;margin-top:40px;font-family:var(--latin);font-size:12.5px;color:var(--mute);letter-spacing:.1em}
+/* drawn svg */
+.draw .ln{fill:none;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s cubic-bezier(.45,.05,.2,1) .3s}
+.draw .ln.d2{transition-delay:.8s}.draw .ln.d3{transition-delay:1.3s}.draw .ln.d4{transition-delay:1.8s}
+.draw .pop{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .8s,transform .8s cubic-bezier(.3,1.6,.5,1)}
+.draw .lbl{opacity:0;transition:opacity 1s 1.8s}
+.draw.is-in .ln{stroke-dashoffset:0}
+.draw.is-in .pop{opacity:1;transform:none}
+.draw.is-in .lbl{opacity:1}
+.draw .pop.p2{transition-delay:.7s}.draw .pop.p3{transition-delay:1.2s}.draw .pop.p4{transition-delay:1.7s}.draw .pop.p5{transition-delay:2.2s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal,.hero [data-in]{opacity:1;transform:none}
+  .steps::after{transform:none}.step__dot::after{transform:scale(1)}
+  .draw .ln{stroke-dashoffset:0}.draw .pop,.draw .lbl{opacity:1;transform:none}
+  .biz__media img{transform:none}
+}
+
+
+.step__no{font-size:19px;font-style:italic}
+.logo svg path{fill:none;stroke:var(--accent);stroke-width:1.6}
+.logo__txt{font-family:var(--latin);font-weight:500;font-size:21px;letter-spacing:.08em}
+.logo__txt small{font-family:var(--sans);font-size:10.5px;letter-spacing:.2em}
+/* heading: italic eyebrow + JA serif (H3) */
+.eb{display:flex;align-items:center;gap:10px;font-family:var(--latin);font-style:italic;font-size:1.15rem;color:var(--accent);letter-spacing:.06em}
+.eb::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gloss);box-shadow:0 0 10px rgba(233,210,168,.8)}
+.h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.2vw,40px);letter-spacing:.12em;line-height:1.55;margin-top:14px}
+.lead{color:var(--text2);max-width:34em;margin-top:22px}
+/* hero A */
+.hero{background:radial-gradient(110% 80% at 70% 30%,#2e2024 0%,var(--base) 62%)}
+.hero__veil{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(29,21,23,.5) 0%,transparent 28%,transparent 60%,rgba(29,21,23,.92) 100%)}
+.hero__in{position:relative;z-index:2;min-height:100vh;min-height:100svh;width:min(1240px,100% - 48px);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;padding:120px 0 96px}
+.hero h1{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(40px,5.4vw,76px);letter-spacing:.2em;line-height:1.5;align-self:center;margin-right:clamp(0px,4vw,60px)}
+.hero h1 span{display:block}
+.hero h1 span+span{padding-top:2.4em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__lead{max-width:30em}
+.hero__en{font-family:var(--latin);font-style:italic;font-size:1.2rem;color:var(--gloss);letter-spacing:.08em;margin-bottom:10px}
+.hero__lead p{color:var(--text2);font-size:15px}
+.menu-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.menu-pills a{border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:12.5px;text-decoration:none;letter-spacing:.1em;transition:border-color .3s,background .3s}
+.menu-pills a:hover{border-color:var(--accent);background:rgba(228,162,164,.08)}
+@media (max-width:900px){
+  .hero__in{grid-template-columns:minmax(0,1fr);align-content:end;gap:28px;padding:110px 0 80px}
+  .hero h1{writing-mode:horizontal-tb;font-size:clamp(32px,9vw,44px);letter-spacing:.1em;margin:0;align-self:auto;order:-1}
+  .hero h1 span+span{padding:0 0 0 1em}
+}
+/* rail: polish layers, filling bottom-up */
+.rail{width:40px}
+.rail__tube{position:absolute;left:14px;top:0;bottom:0;width:7px;border-radius:7px;border:1px solid var(--line);overflow:hidden}
+.rail__tube i{position:absolute;inset:0;transform-origin:bottom;transform:scaleY(0);background:linear-gradient(0deg,rgba(243,233,228,.35) 0 33%,var(--accent) 33% 67%,var(--gloss) 67% 100%)}
+.rail__brush{position:absolute;left:5px;width:26px;height:26px;margin-top:-26px;top:100%;fill:var(--accent)}
+.rail__lbl{position:absolute;right:30px;top:100%;transform:translateY(-100%);writing-mode:vertical-rl;font-family:var(--latin);font-style:italic;font-size:13px;color:var(--mute);letter-spacing:.14em;white-space:nowrap}
+/* concept */
+.concept{background:var(--base-2)}
+.concept__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,110px);align-items:center}
+.concept p+p{margin-top:1.3em}
+.name-def{margin-top:34px;border-top:1px solid var(--line)}
+.name-def div{display:grid;grid-template-columns:7em minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.name-def dt{font-family:var(--latin);font-style:italic;font-size:1.3rem;color:var(--gloss)}
+.name-def dd{margin:0;font-size:15px;color:var(--text2)}
+.layers{width:100%;max-width:520px;margin:0 auto;overflow:visible}
+.layers .ln{stroke-width:1.4}
+.layers text{font-family:var(--sans);font-size:14px;fill:var(--text);letter-spacing:.1em}
+.layers text.k{font-family:var(--latin);font-style:italic;font-size:15px;fill:var(--accent)}
+@media (max-width:900px){.concept__grid{grid-template-columns:minmax(0,1fr)}}
+/* salon trio */
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.4vw,32px);margin-top:clamp(72px,10vw,120px)}
+.trio article{border-top:1px solid var(--line);padding-top:22px}
+.trio .ph{aspect-ratio:4/5;border-radius:120px 120px 2px 2px}
+.trio .ph img{filter:saturate(.75);transition:transform 1.4s cubic-bezier(.22,.7,.2,1)}
+.trio article:hover .ph img{transform:scale(1.04)}
+.trio h3{font-family:var(--serif);font-size:22px;letter-spacing:.14em;margin:20px 0 8px}
+.trio p{font-size:15px;color:var(--text2)}
+@media (max-width:860px){.trio{grid-template-columns:minmax(0,1fr)}.trio .ph{aspect-ratio:16/10;border-radius:90px 90px 2px 2px}}
+.biz__media{border-radius:2px 2px 140px 2px}
+.biz:nth-of-type(even) .biz__media{border-radius:2px 2px 2px 140px}
+/* career */
+.career{background:var(--base-2)}
+.join{margin-top:clamp(72px,10vw,120px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,6vw,80px);padding:clamp(32px,5vw,56px);border:1px solid var(--line)}
+.join h3{font-family:var(--serif);font-size:clamp(22px,2.4vw,28px);letter-spacing:.14em;line-height:1.6}
+@media (max-width:860px){.join{grid-template-columns:minmax(0,1fr)}}
+.step__dot{border-radius:50% 50% 46% 46%/60% 60% 40% 40%}
+.message{background:radial-gradient(60% 50% at 50% 40%,rgba(228,162,164,.08),transparent 70%)}
+@media (prefers-reduced-motion:reduce){.rail__tube i{transition:none}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="header" id="header">
+  <div class="header__in">
+    <a class="logo" href="#top" aria-label="株式会社M.prorise トップへ"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 C22 8 23 16 22 21 C21 27 11 27 10 21 C9 16 10 8 16 4Z"/><path d="M13 12 C13.5 9.5 15 8 16 7.5" stroke-linecap="round"/></svg><span class="logo__txt">M.prorise<small>株式会社M.prorise</small></span><!-- 【確認事項】英字ロゴは商号表記をテキストで組んだ仮ロゴです --></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="gnav" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="gnav" id="gnav" aria-label="メインメニュー"><ul><li><a href="#concept">名前のこと</a></li><li><a href="#salon">サロン</a></li><li><a href="#career">スクール・人材紹介</a></li><li><a href="#flow">サロンの流れ</a></li><li><a href="#message">代表メッセージ</a></li><li><a href="#company">会社概要</a></li></ul></nav>
+  </div>
+</header>
+<div class="rail" id="rail" aria-hidden="true">
+  <div class="rail__tube"><i id="railFill"></i></div>
+  <svg class="rail__brush" id="railBrush" viewBox="0 0 26 26"><path d="M11 1h4v9h-4z" opacity=".55"/><path d="M9 10h8l-1 6c0 3-1.5 6-3 9-1.5-3-3-6-3-9z"/></svg>
+  <span class="rail__lbl" id="railLbl">base coat</span>
+</div>
+<main id="main">
+<section class="hero" id="top" aria-label="メインビジュアル">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__in">
+    <div class="hero__lead">
+      <p class="hero__en" data-in="2">Nail &amp; Beauty Salon, School, Career</p>
+      <p data-in="3">ネイルサロンを主に、ストレッチ・HBL・脱毛までそろう複合ビューティーサロン。<span class="nw">ネイルスクールと人材紹介で、</span><span class="nw">美容の仕事に携わる人の歩みも支えています。</span></p>
+      <div class="menu-pills" data-in="4" aria-label="事業一覧"><a href="#salon">ネイル</a><a href="#salon-care">ストレッチ</a><a href="#salon-care">HBL</a><a href="#salon-care">脱毛</a><a href="#career">ネイルスクール</a><a href="#career">人材紹介</a></div>
+    </div>
+    <!-- 【確認事項】キャッチコピーは仮案です -->
+    <h1 data-in="1"><span>指先から、</span><span>ひとを<em>上</em>へ。</span></h1>
+  </div>
+  <span class="cue" aria-hidden="true"></span>
+</section>
+
+<section class="sec concept" id="concept" aria-labelledby="concept-h">
+  <div class="wrap concept__grid">
+    <div class="reveal">
+      <p class="eb">The name</p>
+      <h2 class="h2" id="concept-h">プロの手で、<br>ひとを一段、上へ。</h2>
+      <!-- 【確認事項】社名の解釈（pro＋rise）は本案のデザイン上の読みです。「M.」は解釈に使っていません -->
+      <p class="lead">社名の「prorise」を、私たちはふたつの言葉に分けて読んでいます。</p>
+      <dl class="name-def">
+        <div><dt>pro</dt><dd>現場で磨かれた、プロの技術と目</dd></div>
+        <div><dt>rise</dt><dd>指先が整うと、気持ちも少し上を向く</dd></div>
+      </dl>
+      <p style="margin-top:28px">爪がきれいに整うと、手元を見るたびに気持ちが少し上向く。M.proriseは、その小さな変化をいちばん大切にしているビューティーサロンです。ネイルを主に、ストレッチ、HBL、脱毛までをひとつの場所でそろえています。</p>
+      <p>ネイルが、ベース・カラー・トップの三層で仕上がるように。サロンで整え、スクールで技術を身につけ、人材紹介で次の仕事へつなぐ。三つの仕事を重ねて、美容に関わる人を一段ずつ上へ押し上げます。</p>
+    </div>
+    <div class="reveal"><svg class="layers draw" id="layers" viewBox="0 0 520 420" role="img" aria-label="ネイルのベース・カラー・トップの三層を、サロン・スクール・人材紹介の三つの仕事に重ねた図">
+  <path class="ln" pathLength="1" stroke="rgba(243,233,228,.55)" d="M150.0 50.0 L157.2 50.9 L164.5 53.7 L171.8 58.3 L179.1 64.7 L186.4 72.8 L193.6 82.5 L200.9 93.7 L208.0 106.2 L214.9 120.1 L221.5 135.0 L227.7 150.9 L233.4 167.5 L238.4 184.7 L242.7 202.2 L246.0 220.0 L245.5 231.0 L243.9 241.9 L241.3 252.6 L237.7 262.9 L233.1 272.7 L227.7 282.0 L221.3 290.5 L214.2 298.3 L206.4 305.3 L198.0 311.3 L189.0 316.3 L179.7 320.2 L170.0 323.1 L160.0 324.8 L150.0 325.4 L140.0 324.8 L130.0 323.1 L120.3 320.2 L111.0 316.3 L102.0 311.3 L93.6 305.3 L85.8 298.3 L78.7 290.5 L72.3 282.0 L66.9 272.7 L62.3 262.9 L58.7 252.6 L56.1 241.9 L54.5 231.0 L54.0 220.0 L57.3 202.2 L61.6 184.7 L66.6 167.5 L72.3 150.9 L78.5 135.0 L85.1 120.1 L92.0 106.2 L99.1 93.7 L106.4 82.5 L113.6 72.8 L120.9 64.7 L128.2 58.3 L135.5 53.7 L142.8 50.9 Z"/>
+  <path class="ln d2" pathLength="1" stroke="var(--accent)" d="M150.0 78.0 L155.9 78.8 L161.8 81.2 L167.7 85.2 L173.6 90.8 L179.5 97.8 L185.5 106.3 L191.3 116.0 L197.1 127.0 L202.7 139.0 L208.1 152.0 L213.1 165.8 L217.8 180.3 L221.9 195.2 L225.3 210.5 L228.0 226.0 L227.6 235.6 L226.3 245.1 L224.2 254.4 L221.3 263.3 L217.5 271.9 L213.1 279.9 L208.0 287.4 L202.2 294.2 L195.8 300.2 L189.0 305.5 L181.7 309.8 L174.1 313.3 L166.2 315.8 L158.2 317.3 L150.0 317.8 L141.8 317.3 L133.8 315.8 L125.9 313.3 L118.3 309.8 L111.0 305.5 L104.2 300.2 L97.8 294.2 L92.0 287.4 L86.9 279.9 L82.5 271.9 L78.7 263.3 L75.8 254.4 L73.7 245.1 L72.4 235.6 L72.0 226.0 L74.7 210.5 L78.1 195.2 L82.2 180.3 L86.9 165.8 L91.9 152.0 L97.3 139.0 L102.9 127.0 L108.7 116.0 L114.5 106.3 L120.5 97.8 L126.4 90.8 L132.3 85.2 L138.2 81.2 L144.1 78.8 Z"/>
+  <path class="ln d3" pathLength="1" stroke="var(--gloss)" d="M150.0 108.0 L154.5 108.7 L159.1 110.7 L163.6 114.1 L168.2 118.7 L172.7 124.6 L177.3 131.7 L181.8 139.9 L186.2 149.0 L190.6 159.1 L194.7 170.0 L198.6 181.6 L202.1 193.7 L205.3 206.2 L207.9 219.0 L210.0 232.0 L209.7 240.0 L208.7 248.0 L207.1 255.8 L204.8 263.3 L202.0 270.4 L198.5 277.2 L194.6 283.4 L190.1 289.1 L185.3 294.2 L180.0 298.6 L174.4 302.2 L168.5 305.1 L162.5 307.2 L156.3 308.5 L150.0 308.9 L143.7 308.5 L137.5 307.2 L131.5 305.1 L125.6 302.2 L120.0 298.6 L114.7 294.2 L109.9 289.1 L105.4 283.4 L101.5 277.2 L98.0 270.4 L95.2 263.3 L92.9 255.8 L91.3 248.0 L90.3 240.0 L90.0 232.0 L92.1 219.0 L94.7 206.2 L97.9 193.7 L101.4 181.6 L105.3 170.0 L109.4 159.1 L113.8 149.0 L118.2 139.9 L122.7 131.7 L127.3 124.6 L131.8 118.7 L136.4 114.1 L140.9 110.7 L145.5 108.7 Z"/>
+  <path class="ln d2" pathLength="1" stroke="var(--line)" d="M219 130 L300 130"/>
+  <path class="ln d3" pathLength="1" stroke="var(--line)" d="M223 200 L300 200"/>
+  <path class="ln d4" pathLength="1" stroke="var(--line)" d="M202 270 L300 270"/>
+  <circle class="pop p2" cx="219" cy="130" r="4" fill="rgba(243,233,228,.8)"/>
+  <circle class="pop p3" cx="223" cy="200" r="4" fill="var(--accent)"/>
+  <circle class="pop p4" cx="202" cy="270" r="4" fill="var(--gloss)"/>
+  <text class="lbl k" x="312" y="122">base</text><text class="lbl" x="312" y="146">整える ― サロン</text>
+  <text class="lbl k" x="312" y="192">color</text><text class="lbl" x="312" y="216">身につける ― スクール</text>
+  <text class="lbl k" x="312" y="262">top</text><text class="lbl" x="312" y="286">次へつなぐ ― 人材紹介</text>
+</svg></div>
+  </div>
+</section>
+
+<figure class="band" aria-label="重ねた手元のネイル">
+  <!-- 画像：Unsplash（仮）。自店の施術写真への差し替え推奨 -->
+  <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=2000&q=72" alt="" loading="lazy" aria-hidden="true" onerror="this.parentNode.classList.add('is-fallback');this.remove()">
+  <figcaption>小さな爪に、いちばん集中する。</figcaption>
+</figure>
+
+<section class="sec salon" id="salon" aria-labelledby="salon-h">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eb">Salon menu</p>
+      <h2 class="h2" id="salon-h">ひとつのサロンで、<br>指先から全身まで。</h2>
+      <p class="lead">ネイルを軸に、からだのケアまで。通う場所をいくつも探さなくていいサロンを目指しています。</p>
+    </div>
+    <!-- 【確認事項】各メニューの説明はCSVに無い補足です。料金・所要時間は掲載していません -->
+    <article class="biz" style="margin-top:clamp(56px,8vw,96px)">
+      <figure class="biz__media ph"><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1400&q=72" alt="ネイリストがお客様の爪を丁寧にケアしている様子" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+      <div>
+        <p class="biz__kind">Nail ― サロンの中心</p>
+        <h3>爪の状態を見きわめて、<br>日常になじむ一枚に。</h3>
+        <p>サロンの中心となるメニューです。爪の状態を確かめるケアから、毎日の装いになじむデザイン、特別な日のアートまで。一人ひとりの好みと暮らしに合わせて仕上げます。</p>
+        <ul class="tags"><li>ネイルケア</li><li>デザイン</li><li>アート</li></ul>
+      </div>
+    </article>
+    <div class="trio" id="salon-care">
+      <article class="reveal">
+        <figure class="ph"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=72" alt="マットの上でからだを伸ばすストレッチのイメージ" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+        <h3>ストレッチ</h3>
+        <p>こわばりがちなからだを、無理のない範囲でゆっくりとほぐしていくメニューです。</p>
+      </article>
+      <article class="reveal">
+        <!-- 【確認事項】HBLの正式名称・内容をご確認ください。説明は仮です -->
+        <figure class="ph"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=72" alt="美容オイルを手に取る施術のイメージ" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+        <h3>HBL</h3>
+        <p>サロンでご提供しているHBLのメニューです。内容はご来店時にスタッフがご案内します。</p>
+      </article>
+      <article class="reveal">
+        <!-- 【確認事項】脱毛の方式・対象部位は記載していません。表現が医療行為と受け取られないかご確認ください -->
+        <figure class="ph"><img src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=900&q=72" alt="肌のお手入れを受ける女性" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+        <h3>脱毛</h3>
+        <p>ネイルやストレッチと合わせて通いやすい、サロンの脱毛メニューです。肌の状態を確かめながら進めます。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec career" id="career" aria-labelledby="career-h">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eb">School &amp; Career</p>
+      <h2 class="h2" id="career-h">学ぶ人と、<br>働く人のために。</h2>
+    </div>
+    <article class="biz" style="margin-top:clamp(56px,8vw,96px)">
+      <figure class="biz__media ph"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=72" alt="落ち着いた色のネイルをまとった指先" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+      <div>
+        <!-- 【確認事項】スクールのコース・資格対応等は未記載。説明は仮です -->
+        <p class="biz__kind">Nail school ― ネイルスクール</p>
+        <h3>サロンの技術を、<br>これから目指す人へ。</h3>
+        <p>サロンの現場で培った技術と考え方を、これからネイリストを目指す方へ。基礎から一歩ずつ身につけられる学びの場を運営しています。</p>
+      </div>
+    </article>
+    <article class="biz">
+      <figure class="biz__media ph"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1400&q=72" alt="明るく清潔感のあるサロンの施術スペース" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+      <div>
+        <!-- 【確認事項】有料職業紹介の許可番号・対象職種をご確認ください。説明は仮です -->
+        <p class="biz__kind">Career ― 有料人材紹介</p>
+        <h3>美容の仕事を知るから、<br>できる橋渡しを。</h3>
+        <p>有料人材紹介業として、働く場所を探す人と、人を求める職場とをつなぎます。美容の現場を知るサロンだからこその目線で、互いに納得できる出会いを目指しています。</p>
+      </div>
+    </article>
+    <!-- 【確認事項】CSVの「営業担当も必須」の意図をご確認ください。募集要項・応募方法は掲載していません -->
+    <div class="join reveal">
+      <h3>ともに働く仲間</h3>
+      <div>
+        <p>サロン、スクール、人材紹介。それぞれの事業を育てていくために、施術に携わるスタッフだけでなく、事業を外へ広げていく営業担当の力も欠かせません。美容の仕事を、さまざまな立場から支えてくれる方との出会いを大切にしています。</p>
+        <ul class="tags"><li>ネイリスト</li><li>サロンスタッフ</li><li>スクール講師</li><li>営業担当</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="flow" aria-labelledby="flow-h">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eb">Salon flow</p>
+      <h2 class="h2" id="flow-h">サロンでの流れ</h2>
+      <!-- 【確認事項】サロンでの流れは仮の内容です。実際の手順に合わせて修正してください（実際の手順なので番号を使用） -->
+    </div>
+    <ol class="steps" id="steps">
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">01</span><h3>聴く</h3><small>カウンセリング</small><p>ご希望のデザインや、手元・からだの気になるところをうかがいます。</p></li>
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">02</span><h3>整える</h3><small>ケア・下地</small><p>爪や肌の状態を確かめ、仕上がりを左右する下地を整えます。</p></li>
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">03</span><h3>彩る</h3><small>施術・仕上げ</small><p>ご希望に合わせて、ひとつずつ丁寧に仕上げていきます。</p></li>
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">04</span><h3>見送る</h3><small>次回のご相談</small><p>お手入れの方法と、次に来ていただく時期をご案内します。</p></li>
+</ol>
+    <div style="margin-top:clamp(72px,10vw,120px)" class="reveal">
+      <p class="eb">Our values</p>
+      <h2 class="h2">大切にしていること</h2>
+      <!-- 【確認事項】3つの価値観はすべて仮案です -->
+    </div>
+    <ul class="values reveal"><li><h3>手元から、ていねいに</h3><p>小さな爪に向き合う集中力を、すべてのメニューの基本にしています。</p></li><li><h3>ひとつの場所で、まとめて</h3><p>ネイルからからだのケアまで。通う場所をいくつも探さなくていいサロンに。</p></li><li><h3>技術を、次の人へ</h3><p>スクールと人材紹介を通じて、美容の仕事が続いていく道をつくります。</p></li></ul>
+  </div>
+</section>
+
+<section class="sec message" id="message" aria-labelledby="msg-h">
+  <!-- 【確認事項】代表メッセージは草案です。代表者ご本人の確認・修正を経て公開してください。署名欄の氏名は入れていません -->
+  <div class="wrap">
+    <div class="msg reveal"><h2 class="msg__title" id="msg-h">指先の、<br>その先へ。<small>代表メッセージ</small></h2><div class="msg__body"><p class="first">爪がひとつ整うだけで、人は少し前を向ける。</p><p>サロンに立ちながら、何度もそう感じてきました。手元を見て笑顔になるお客様の姿が、私たちの仕事のいちばんの手ごたえです。</p><p>その技術を、サロンの中だけで終わらせたくない。ネイルを学びたい人には学ぶ場所を、美容の仕事を探す人には次の職場を。スクールと人材紹介を始めたのは、そんな思いからでした。</p><p>お客様にも、学ぶ人にも、ともに働く仲間にも。関わるすべての人の毎日を、一段ずつ上へ押し上げる会社でありたいと考えています。</p><p class="msg__sign">株式会社M.prorise　代表取締役</p></div></div>
+  </div>
+</section>
+
+<section class="sec" id="company" aria-labelledby="company-h" style="background:var(--base-2)">
+  <div class="wrap profile-grid">
+    <div class="reveal"><p class="eb">Company</p><h2 class="h2" id="company-h">会社概要</h2></div>
+    <table class="profile reveal">
+<tr><th scope="row">商号</th><td>株式会社M.prorise</td></tr>
+<!-- 【確認事項】代表者の役職名（「代表取締役」と仮置き） -->
+<tr><th scope="row">代表者</th><td>代表取締役　丸地 真弓</td></tr>
+<tr><th scope="row">所在地</th><td>〒450-0002<br>愛知県名古屋市中村区名駅3-20-21 名三ビル2F</td></tr>
+<tr><th scope="row">事業内容</th><td><ul><li>ネイルサロンを主としたビューティーサロン（ストレッチ、HBL、脱毛などの複合サロン）</li><li>ネイルスクール</li><li>有料人材紹介業</li></ul></td></tr>
+<!-- 要確認：有料職業紹介事業の許可番号（ご提供いただければ掲載）
+      <tr><th scope="row">許可番号</th><td>有料職業紹介事業　00-ユ-000000</td></tr>
+      -->
+<!-- 要確認：設立年月日・資本金・従業員数（未確認のため非表示）
+      <tr><th scope="row">設立</th><td></td></tr>
+      <tr><th scope="row">資本金</th><td></td></tr>
+      <tr><th scope="row">従業員数</th><td></td></tr>
+      -->
+</table>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__in">
+      <div><a class="logo" href="#top" aria-label="株式会社M.prorise トップへ"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 C22 8 23 16 22 21 C21 27 11 27 10 21 C9 16 10 8 16 4Z"/><path d="M13 12 C13.5 9.5 15 8 16 7.5" stroke-linecap="round"/></svg><span class="logo__txt">M.prorise<small>株式会社M.prorise</small></span><!-- 【確認事項】英字ロゴは商号表記をテキストで組んだ仮ロゴです --></a><p class="footer__tag">指先から、ひとを上へ。</p></div>
+      <nav aria-label="フッターメニュー"><ul><li><a href="#concept">名前のこと</a></li><li><a href="#salon">サロン</a></li><li><a href="#career">スクール・人材紹介</a></li><li><a href="#flow">サロンの流れ</a></li><li><a href="#message">代表メッセージ</a></li><li><a href="#company">会社概要</a></li></ul></nav>
+    </div>
+    <small class="footer__copy">&copy; <span id="year">2026</span> 株式会社M.prorise</small>
+  </div>
+</footer>
+<script>
+
+(function(){
+'use strict';
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $ = function(s, r){ return (r || document).querySelector(s); };
+var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+var hooks = [];
+function addScroll(f){ hooks.push(f); }
+function progress(){ var max = document.documentElement.scrollHeight - innerHeight; return max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0; }
+var revealHooks = {};
+function onReveal(id, f){ revealHooks[id] = f; }
+/* canvas loop boilerplate: DPR<=2, debounced resize, pause offscreen/hidden, still frame on reduced motion */
+function canvasLoop(cv, o){
+  if (!cv || !cv.getContext) return null;
+  var ctx = cv.getContext('2d'), host = o.host || cv.parentElement;
+  var api = {ctx:ctx, W:0, H:0, cv:cv};
+  var dpr = 1, running = false, visible = true, raf = 0, t0 = performance.now(), lastW = -1;
+  function resize(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = cv.clientWidth, H = cv.clientHeight;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    api.W = W; api.H = H;
+    if (W !== lastW || o.rebuildOnHeight){ lastW = W; if (o.build) o.build(api); }
+  }
+  function loop(now){ if (!running) return; o.draw(api, (now - t0) / 1000); raf = requestAnimationFrame(loop); }
+  function start(){ if (running || reduce || !visible || document.hidden) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop(){ running = false; cancelAnimationFrame(raf); }
+  function still(){ o.draw(api, o.stillT || 99); }
+  api.still = still;
+  resize();
+  if (reduce) still(); else start();
+  var rt; addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ resize(); if (!running) still(); }, 150); });
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ visible = en[0].isIntersecting; if (visible) start(); else stop(); }).observe(host);
+  }
+  document.addEventListener('visibilitychange', function(){ if (document.hidden) stop(); else start(); });
+  return api;
+}
+function rgba(c, a){ return 'rgba(' + c + ',' + a + ')'; }
+function clamp01(x){ return x < 0 ? 0 : x > 1 ? 1 : x; }
+function ease(t){ t = clamp01(t); return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+
+
+/* rail: polish layers fill bottom-up, brush rides the surface */
+var rFill = $('#railFill'), rBrush = $('#railBrush'), rLbl = $('#railLbl');
+addScroll(function(p){
+  rFill.style.transform = 'scaleY(' + p.toFixed(4) + ')';
+  rBrush.style.top = ((1 - p) * 100) + '%';
+  rLbl.style.top = ((1 - p) * 100) + '%';
+  rLbl.textContent = p < .34 ? 'base coat' : (p < .67 ? 'color' : 'top coat');
+});
+/* hero: glitter rises from below and gathers into one nail */
+var ROSE = '228,162,164', GLOSS = '233,210,168', SKIN = '243,233,228';
+var pts = [], free = [], shape = null;
+canvasLoop($('#heroCanvas'), {
+  build: function(a){
+    var W = a.W, H = a.H, mob = W < 760;
+    var cx = mob ? W * .5 : W * .6, cy = mob ? H * .36 : H * .47;
+    var rx = Math.min(W, H) * (mob ? .2 : .15), ry = rx * 1.75;
+    shape = {cx:cx, cy:cy, rx:rx, ry:ry};
+    var n = mob ? 70 : 130; pts = [];
+    for (var i = 0; i < n; i++){
+      var t = i / n * Math.PI * 2, s = Math.sin(t), c = Math.cos(t);
+      var k = 1 - .28 * Math.max(0, c), yy = c > 0 ? -ry * c : -ry * .62 * c;
+      pts.push({sx:Math.random() * W, sy:H + Math.random() * H * .4, tx:cx + rx * s * k, ty:cy + yy,
+        d:Math.random() * 1.4, r:.8 + Math.random() * 1.8, g:Math.random() < .35, ph:Math.random() * 6});
+    }
+    free = [];
+    for (var j = 0; j < (mob ? 40 : 90); j++) free.push({x:Math.random() * W, y:Math.random() * H, v:8 + Math.random() * 22, r:.4 + Math.random() * 1.3, ph:Math.random() * 6});
+  },
+  draw: function(a, t){
+    var c = a.ctx, W = a.W, H = a.H; c.clearRect(0, 0, W, H);
+    free.forEach(function(f){
+      var y = ((f.y - t * f.v) % (H + 20) + H + 20) % (H + 20) - 10;
+      var al = .18 + .3 * (.5 + .5 * Math.sin(t * 1.6 + f.ph));
+      c.fillStyle = rgba(GLOSS, al * (y / H)); c.beginPath(); c.arc(f.x + Math.sin(t * .6 + f.ph) * 6, y, f.r, 0, 6.283); c.fill();
+    });
+    var fillA = clamp01((t - 3.2) / 1.6);
+    if (fillA > 0 && shape){
+      var g = c.createLinearGradient(shape.cx, shape.cy - shape.ry, shape.cx, shape.cy + shape.ry);
+      g.addColorStop(0, rgba(ROSE, .26 * fillA)); g.addColorStop(1, rgba(ROSE, .05 * fillA));
+      c.fillStyle = g; c.beginPath();
+      pts.forEach(function(p, i){ i ? c.lineTo(p.tx, p.ty) : c.moveTo(p.tx, p.ty); }); c.closePath(); c.fill();
+      /* moving gloss sheen */
+      var sh = ((t - 3.2) * .25) % 1;
+      c.save(); c.clip();
+      var sx = shape.cx - shape.rx * 1.6 + sh * shape.rx * 3.2;
+      var sg = c.createLinearGradient(sx - 30, 0, sx + 30, 0);
+      sg.addColorStop(0, rgba(SKIN, 0)); sg.addColorStop(.5, rgba(SKIN, .16 * fillA)); sg.addColorStop(1, rgba(SKIN, 0));
+      c.fillStyle = sg; c.fillRect(sx - 40, shape.cy - shape.ry, 80, shape.ry * 2); c.restore();
+    }
+    var lineA = clamp01((t - 2.4) / 1.2);
+    if (lineA > 0){
+      c.beginPath(); pts.forEach(function(p, i){ i ? c.lineTo(p.tx, p.ty) : c.moveTo(p.tx, p.ty); }); c.closePath();
+      c.strokeStyle = rgba(ROSE, .7 * lineA); c.lineWidth = 1.2; c.stroke();
+    }
+    pts.forEach(function(p){
+      var e = ease((t - p.d) / 2.4);
+      var x = p.sx + (p.tx - p.sx) * e, y = p.sy + (p.ty - p.sy) * e;
+      var tw = e >= 1 ? .55 + .45 * Math.sin(t * 2.2 + p.ph) : 1;
+      c.fillStyle = rgba(p.g ? GLOSS : ROSE, .9 * tw); c.beginPath(); c.arc(x, y, p.r, 0, 6.283); c.fill();
+    });
+  }
+});
+
+
+/* header + rail (rAF-throttled) */
+var header = $('#header'), ticking = false;
+function onScroll(){ header.classList.toggle('is-scrolled', scrollY > 40); var p = progress(); hooks.forEach(function(f){ f(p); }); ticking = false; }
+addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+addEventListener('resize', onScroll);
+addEventListener('load', onScroll);
+onScroll();
+/* band parallax */
+var bandImg = $('.band img');
+if (bandImg && !reduce){ addScroll(function(){
+  var r = bandImg.parentElement.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > innerHeight) return;
+  var k = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+  bandImg.style.transform = 'translateY(' + (k * -40).toFixed(1) + 'px)';
+}); }
+/* menu */
+var btn = $('#menuBtn'), nav = $('#gnav');
+function setMenu(open){
+  btn.setAttribute('aria-expanded', String(open));
+  btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  nav.classList.toggle('is-open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open){ var f = nav.querySelector('a'); if (f) f.focus(); }
+}
+btn.addEventListener('click', function(){ setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+nav.addEventListener('click', function(e){ if (e.target.closest('a') && nav.classList.contains('is-open')) setMenu(false); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && nav.classList.contains('is-open')){ setMenu(false); btn.focus(); } });
+matchMedia('(min-width:901px)').addEventListener('change', function(m){ if (m.matches) setMenu(false); });
+/* reveal: one-shot */
+var targets = $$('.reveal, .draw, .steps, .biz');
+function hit(el){ el.classList.add('is-in'); if (el.id && revealHooks[el.id]) revealHooks[el.id](el); }
+if ('IntersectionObserver' in window && !reduce){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (!en.isIntersecting) return; hit(en.target); io.unobserve(en.target); });
+  }, {threshold:.18, rootMargin:'0px 0px -6% 0px'});
+  targets.forEach(function(t){ io.observe(t); });
+} else { targets.forEach(hit); }
+/* entrance + year */
+requestAnimationFrame(function(){ requestAnimationFrame(function(){ document.body.classList.add('is-loaded'); }); });
+var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
+})();
+
+</script>
+</body>
+</html>
